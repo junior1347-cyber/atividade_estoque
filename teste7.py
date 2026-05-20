@@ -1,0 +1,37 @@
+#chav = estoque_cont.keys()
+#val = estoque_cont.values()
+estoque_cont = {
+	"cabo de rede": {"preco": 50.00, "quantidade": 5 },
+	"bateria moura": {"preco": 40.00, "quantidade": 10 },
+	"pilha AAA": {"preco": 20.00, "quantidade": 100 },
+}
+while True:
+
+	try:
+		print("\n--- MENU PRINCIPAL ---")
+		print("1-Visualizar estoque atual")
+		print("2-Registrar entrada de produto")
+		print("3-Registrar saída de produto")
+		print("4-Sair do sistema\n")
+		#OPÇÃO1
+		opcao = int(input(" Escolha uma opção:  "))
+		if opcao == 1:
+			for chav, val in estoque_cont.items():
+				print(chav, val["preco"])
+		#OPÇÃO2
+		if opcao == 2:
+			produto = input("Nome do produto: ")
+			preco_produto = float(input("Preço: "))
+			qtd_produto = int(input("Quantidade a adicionar: "))
+
+			estoque_cont[produto] = {"preco": preco_produto, "quantidade": qtd_produto}
+
+		#OPÇÃO3
+
+
+		#OPÇÃO4
+		if opcao == 4:
+			break
+
+	except ValueError:
+		print("Digite apenas numeros válidos!")
