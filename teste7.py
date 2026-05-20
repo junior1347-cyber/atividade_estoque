@@ -13,11 +13,14 @@ while True:
 		print("2-Registrar entrada de produto")
 		print("3-Registrar saída de produto")
 		print("4-Sair do sistema\n")
-		#OPÇÃO1
+
 		opcao = int(input(" Escolha uma opção:  "))
+
+		#OPÇÃO1
 		if opcao == 1:
-			for chav, val in estoque_cont.items():
-				print(chav, val["preco"])
+			for c, v in estoque_cont.items():
+				print(f"{c}: R$ {v["preco"]:.2f}")
+
 		#OPÇÃO2
 		if opcao == 2:
 			produto = input("Nome do produto: ")
@@ -27,8 +30,10 @@ while True:
 			estoque_cont[produto] = {"preco": preco_produto, "quantidade": qtd_produto}
 
 		#OPÇÃO3
-
-
+		if opcao == 3:
+			produto_ret = input("Nome do produto: ")
+			qtd_ret = int(input("Quantidade a retirar: "))
+			estoque_cont[]
 		#OPÇÃO4
 		if opcao == 4:
 			break
