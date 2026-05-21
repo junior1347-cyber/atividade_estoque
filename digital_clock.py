@@ -12,14 +12,14 @@ def exibir_relogio():
     
     # Dicionário com fusos horários principais
     fusos = {
-        "🌍 GMT/UTC (Londres)": "UTC",
-        "🌎 EST (Nova York)": "America/New_York",
-        "🌎 CST (Chicago)": "America/Chicago",
-        "🌎 PST (Los Angeles)": "America/Los_Angeles",
-        "🌏 JST (Tóquio)": "Asia/Tokyo",
-        "🌏 IST (Índia)": "Asia/Kolkata",
-        "🌏 AEST (Sydney)": "Australia/Sydney",
-        "🇧🇷 BRT (São Paulo)": "America/Sao_Paulo",
+        " GMT/UTC (Londres)": "UTC",
+        " EST (Nova York)": "America/New_York",
+        " CST (Chicago)": "America/Chicago",
+        " PST (Los Angeles)": "America/Los_Angeles",
+        " JST (Tóquio)": "Asia/Tokyo",
+        " IST (Índia)": "Asia/Kolkata",
+        " AEST (Sydney)": "Australia/Sydney",
+        " BRT (São Paulo)": "America/Sao_Paulo",
     }
     
     try:
@@ -27,7 +27,7 @@ def exibir_relogio():
             limpar_tela()
             
             print("=" * 60)
-            print(" " * 15 + "⏰ RELÓGIO MUNDIAL DIGITAL ⏰")
+            print(" " * 15 + "  RELÓGIO MUNDIAL DIGITAL ")
             print("=" * 60)
             print()
             
@@ -41,8 +41,8 @@ def exibir_relogio():
                 data_formatada = hora_atual.strftime("%d/%m/%Y")
                 
                 print(f"{nome_fuso}")
-                print(f"  ⌚ Hora: {hora_formatada}")
-                print(f"  📅 Data: {data_formatada}")
+                print(f"   Hora: {hora_formatada}")
+                print(f"  Data: {data_formatada}")
                 print()
             
             print("=" * 60)
@@ -54,7 +54,7 @@ def exibir_relogio():
             
     except KeyboardInterrupt:
         limpar_tela()
-        print("\n👋 Relógio encerrado!")
+        print("\n Relógio encerrado!")
         print("Obrigado por usar o Relógio Mundial Digital!")
 
 def menu_personalizado():
@@ -91,7 +91,7 @@ def exibir_relogio_personalizado(fusos_escolhidos):
             limpar_tela()
             
             print("=" * 60)
-            print(" " * 15 + "⏰ RELÓGIO DIGITAL PERSONALIZADO ⏰")
+            print(" " * 15 + "  RELÓGIO DIGITAL PERSONALIZADO  ")
             print("=" * 60)
             print()
             
@@ -103,9 +103,9 @@ def exibir_relogio_personalizado(fusos_escolhidos):
                 hora_formatada = hora_atual.strftime("%H:%M:%S")
                 data_formatada = hora_atual.strftime("%d/%m/%Y")
                 
-                print(f"🌐 {nome_fuso}")
-                print(f"   ⌚ Hora: {hora_formatada}")
-                print(f"   📅 Data: {data_formatada}")
+                print(f" {nome_fuso}")
+                print(f"    Hora: {hora_formatada}")
+                print(f"   Data: {data_formatada}")
                 print()
             
             print("=" * 60)
@@ -116,7 +116,7 @@ def exibir_relogio_personalizado(fusos_escolhidos):
             
     except KeyboardInterrupt:
         limpar_tela()
-        print("\n👋 Relógio encerrado!")
+        print("\n Relógio encerrado!")
 
 def main():
     """Função principal com menu de opções"""
@@ -125,7 +125,7 @@ def main():
         limpar_tela()
         
         print("=" * 60)
-        print(" " * 10 + "🕐 BEM-VINDO AO RELÓGIO MUNDIAL DIGITAL 🕐")
+        print(" " * 10 + " BEM-VINDO AO RELÓGIO MUNDIAL DIGITAL ")
         print("=" * 60)
         print()
         print("1 - Exibir todos os fusos horários")
@@ -151,21 +151,21 @@ def main():
                 fusos_personalizados = {nome: codigo}
                 exibir_relogio_personalizado(fusos_personalizados)
             else:
-                print("❌ Opção inválida!")
+                print(" Opção inválida!")
                 time.sleep(2)
         
         elif opcao == "3":
-            fusos_brasil = {"🇧🇷 BRT (São Paulo)": "America/Sao_Paulo"}
+            fusos_brasil = {" BRT (São Paulo)": "America/Sao_Paulo"}
             exibir_relogio_personalizado(fusos_brasil)
         
         elif opcao == "4":
             limpar_tela()
-            print("\n👋 Obrigado por usar o Relógio Mundial Digital!")
-            print("Até logo! 🕐\n")
+            print("\n Obrigado por usar o Relógio Mundial Digital!")
+            print("Até logo! \n")
             break
         
         else:
-            print("❌ Opção inválida! Tente novamente.")
+            print(" Opção inválida! Tente novamente.")
             time.sleep(2)
 
 if __name__ == "__main__":
