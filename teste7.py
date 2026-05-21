@@ -1,5 +1,3 @@
-#chav = estoque_cont.keys()
-#val = estoque_cont.values()
 estoque_cont = {
 	"cabo de rede": {"preco": 50.00, "quantidade": 5 },
 	"bateria moura": {"preco": 40.00, "quantidade": 10 },
@@ -33,7 +31,7 @@ while True:
 		if opcao == 3:
 			produto_ret = input("Nome do produto: ")
 			qtd_ret = int(input("Quantidade a retirar: "))
-			estoque_cont[]
+			estoque_cont[produto_ret] = {"quantidade": estoque_cont.pop(produto)}
 		#OPÇÃO4
 		if opcao == 4:
 			break
