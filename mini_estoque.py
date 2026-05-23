@@ -4,7 +4,6 @@ estoque_cont = {
         "pilha AAA": {"preco": 20.00, "quantidade": 100 },
 }
 while True:
-
         try:
                 print("\n--- MENU PRINCIPAL ---")
                 print("1-Visualizar estoque atual")

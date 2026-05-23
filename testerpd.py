@@ -34,9 +34,16 @@ while True:
 				print(f"Produto: {produto.nome} | Valor: R$ {produto.preco:.2f} | Estoque: {produto.quantidade} Unidades")
 		#OPÇÃO2
 		if opcao == 2:
-			for produto in estoque_prod:
-				
+			nome = input("Nome do produto: ")
+			preco = input("Valor: ")
+			quantidade = input("Quantidade: ")
 
-		break
+			novo_produto = E_P(nome, float(preco), int(quantidade))
+			estoque_prod.append(novo_produto)
+			print(f"produto {novo_produto.nome} adicionado com sucesso!")
+
+		#OPÇÃO4
+		if opcao == 4:
+			break
 	except ValueError:
 		print()
