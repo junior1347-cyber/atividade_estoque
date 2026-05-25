@@ -6,11 +6,13 @@ estoque_cont = {
 while True:
 
 	try:
+		print()
 		print("\n--- MENU PRINCIPAL ---")
 		print("1-Visualizar estoque atual")
 		print("2-Registrar entrada de produto")
 		print("3-Registrar saída de produto")
 		print("4-Sair do sistema\n")
+		print()
 
 		opcao = int(input(" Escolha uma opção:  "))
 
@@ -31,7 +33,6 @@ while True:
 		if opcao == 3:
 			produto_ret = input("Nome do produto: ")
 			qtd_ret = int(input("Quantidade a retirar: "))
-			estoque_cont[produto_ret] = {"quantidade": estoque_cont.pop(produto)}
 		#OPÇÃO4
 		if opcao == 4:
 			break
