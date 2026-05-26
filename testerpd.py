@@ -3,7 +3,7 @@ from dataclasses import dataclass
 
 # Define a estrutura de dados para o estoque de produtos
 @dataclass
-class E_P:
+class EstoqueProduto:
     nome: str         # Nome do produto (Texto)
     preco: float       # Preço do produto (Número decimal)
     quantidade: int = 0  # Quantidade em estoque (Inteiro, padrão é 0 caso não informado)
@@ -41,8 +41,8 @@ while True:
 			preco = float(input("Valor: "))
 			quantidade = int(input("Quantidade: "))
 
-			# Cria um novo objeto da classe E_P com os dados digitados
-			novo_produto = E_P(nome, preco, quantidade)
+			# Cria um novo objeto da classe EstoqueProduto com os dados digitados
+			novo_produto = EstoqueProduto(nome, preco, quantidade)
 			# Adiciona o novo produto no final da lista de estoque
 			estoque_prod.append(novo_produto)
 			print(f"Produto {novo_produto.nome} adicionado com sucesso!")
